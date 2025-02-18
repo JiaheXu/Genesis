@@ -51,7 +51,7 @@ def main():
     cube = scene.add_entity(
         gs.morphs.Box(
             size=(0.5, 0.5, 0.01),
-            pos=(0.9, 0.0, 0.1),
+            pos=(0.9, 0.0, 0.2),
             fixed = True,
         ),
         vis_mode="collision",
