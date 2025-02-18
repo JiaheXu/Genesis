@@ -123,11 +123,11 @@ def view(filename, collision, rotate, scale=1.0):
     )
 
     if filename.endswith(".urdf"):
-        morph = gs.morphs.URDF(file=filename, collision=collision, scale=scale)
+        morph = gs.morphs.URDF(file=filename, collision=collision, scale=scale, convexify = False)
     elif filename.endswith(".xml"):
         morph = gs.morphs.MJCF(file=filename, collision=collision, scale=scale)
     else:
-        morph = gs.morphs.Mesh(file=filename, collision=collision, scale=scale)
+        morph = gs.morphs.Mesh(file=filename, collision=collision, scale=scale, convexify=False)
 
     entity = scene.add_entity(
         morph,
