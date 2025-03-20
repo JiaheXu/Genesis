@@ -27,11 +27,12 @@ class IntEnum(enum.IntEnum):
 class GEOM_TYPE(IntEnum):
     PLANE = 0
     SPHERE = 1
-    CYLINDER = 2
-    CAPSULE = 3
-    BOX = 4
-    MESH = 5
-    TERRAIN = 6
+    ELLIPSOID = 2
+    CYLINDER = 3
+    CAPSULE = 4
+    BOX = 5
+    MESH = 6
+    TERRAIN = 7
 
 
 # joint type in rigid solver, ranked by number of dofs
@@ -42,6 +43,12 @@ class JOINT_TYPE(IntEnum):
     SPHERICAL = 3
     FREE = 4
     PLANAR = 5
+
+
+class EQUALITY_TYPE(IntEnum):
+    CONNECT = 0
+    WELD = 1
+    JOINT = 2
 
 
 # joint type in rigid solver, ranked by number of dofs
